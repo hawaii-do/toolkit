@@ -3,12 +3,14 @@
 namespace Toolkit;
 
 use Toolkit\utils\AssetService;
+use Toolkit\models\Office;
 
 include("utils/main.php");
 
 // custom post type
 $toRegister = [
-    AssetService::class
+    AssetService::class,
+    Office::class,
 ];
 
 foreach ($toRegister as $class) {

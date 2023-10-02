@@ -23,7 +23,7 @@ class AssetService
 
     public static function enqueue_scripts()
     {
-        wp_register_script('app', get_stylesheet_directory_uri() . '/public/app.js', [], self::version("/app.js"), true);
+        wp_register_script('app', get_stylesheet_directory_uri() . '/public/app.js', array( 'wp-i18n' ) , self::version("/app.js"), true);
 
         wp_localize_script('app', 'toolkit', [
             'base_url' => site_url(),
