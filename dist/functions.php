@@ -4,6 +4,10 @@ namespace Toolkit;
 
 use Toolkit\utils\AssetService;
 use Toolkit\models\Office;
+use Toolkit\models\Publication;
+use Toolkit\models\PublicationType;
+use Toolkit\models\PublicationCategory;
+use Toolkit\models\PublicationTheme;
 
 include("utils/main.php");
 
@@ -11,6 +15,10 @@ include("utils/main.php");
 $toRegister = [
     AssetService::class,
     Office::class,
+    Publication::class,
+    PublicationType::class,
+    PublicationCategory::class,
+    PublicationTheme::class
 ];
 
 foreach ($toRegister as $class) {

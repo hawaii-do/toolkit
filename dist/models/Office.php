@@ -4,7 +4,7 @@ namespace Toolkit\models;
 class Office extends CustomPostType
 {
     const TYPE = 'office';
-    const SLUG = "office";
+    const SLUG = "amt";
 
     public static function type_settings()
     {
@@ -15,7 +15,7 @@ class Office extends CustomPostType
                 "name" => __("Ämter", "efk"),
                 "singular_name" => __("Amt", "efk"),
                 "menu_name" => __("Ämter", "efk"),
-                "all_items" => __("Ämter", "efk"),
+                "all_items" => __("alle Ämter", "efk"),
                 "add_new" => __("neues Amt", "efk"),
                 "add_new_item" => __("neues Amt", "efk"),
                 "edit_item" => __("Amt bearbeiten", "efk"),
@@ -45,6 +45,11 @@ class Office extends CustomPostType
     }
 
     public function kurzel()
+    {
+        return $this->acf("kurzel");
+    }
+
+    public function abbreviation()
     {
         return $this->acf("kurzel");
     }
