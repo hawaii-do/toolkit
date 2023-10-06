@@ -1,6 +1,6 @@
 {
     "key": "group_651acc300f42f",
-    "title": "Publikationen",
+    "title": "Prüfung",
     "fields": [
         {
             "key": "field_651acc30a21a4",
@@ -91,7 +91,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 0,
+            "wpml_cf_preferences": 1,
             "post_type": [
                 "office"
             ],
@@ -103,6 +103,121 @@
             "bidirectional": 0,
             "ui": 1,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_651c1c0f63204",
+            "label": "Dokuments",
+            "name": "dokuments",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_651c1c5963205",
+            "button_label": "Add Document",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_651c1c5963205",
+                    "label": "Document",
+                    "name": "document",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "return_format": "id",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_651c1c0f63204"
+                },
+                {
+                    "key": "field_651d1b281a2d2",
+                    "label": "Typ",
+                    "name": "typ",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "Bericht": "Bericht",
+                        "Zusammenfassung": "Zusammenfassung"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_651c1c0f63204"
+                }
+            ]
+        },
+        {
+            "key": "field_651d21162a649",
+            "label": "Prüfungsdatum",
+            "name": "prufungsdatum",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "display_format": "d.m.Y",
+            "return_format": "Y-m-d",
+            "first_day": 1
+        },
+        {
+            "key": "field_651d2b46d17c0",
+            "label": "foobar",
+            "name": "foobar",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -110,7 +225,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "publication"
+                "value": "audit"
             }
         ]
     ],
@@ -124,5 +239,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1696257294
+    "modified": 1696410450
 }

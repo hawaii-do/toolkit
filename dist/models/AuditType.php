@@ -1,11 +1,11 @@
 <?php
 namespace Toolkit\models;
 
-class PublicationType extends Taxonomy {
-    const TYPE = 'publication_type';
+class AuditType extends Taxonomy {
+    const TYPE = 'audit_type';
 
     public static function register() {
-        register_taxonomy(self::TYPE, Publication::TYPE, [
+        register_taxonomy(self::TYPE, Audit::TYPE, [
             'hierarchical' => true,
             'show_admin_column' => true,
             'publicly_queryable' => false,

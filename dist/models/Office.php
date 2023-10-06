@@ -3,7 +3,7 @@ namespace Toolkit\models;
 
 class Office extends CustomPostType
 {
-    const TYPE = 'office';
+    const TYPE = 'OFFICE';
     const SLUG = "amt";
 
     public static function type_settings()

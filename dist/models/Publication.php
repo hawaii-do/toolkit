@@ -24,7 +24,7 @@ class Publication extends CustomPostType
                 "view_items" => __("ansicht Publikationen", "efk"),
                 "search_items" => __("suche Publikationen", "efk")
             ],
-            "description" => "Alle Publikationen: Audits, Programme, Berichte, Mitteilungen, etc.",
+            "description" => "Jahrespberichte, Jahresprogramme, Fachtexte, etc.",
             "public" => false,
             "publicly_queryable" => true,
             "show_ui" => true,
