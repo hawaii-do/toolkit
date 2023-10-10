@@ -5,7 +5,7 @@ class AuditType extends Taxonomy {
     const TYPE = 'audit_type';
 
     public static function register() {
-        register_taxonomy(self::TYPE, Audit::TYPE, [
+        register_taxonomy(self::TYPE, Publication::TYPE, [
             'hierarchical' => true,
             'show_admin_column' => true,
             'publicly_queryable' => false,

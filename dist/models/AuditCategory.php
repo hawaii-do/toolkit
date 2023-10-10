@@ -5,13 +5,13 @@ class AuditCategory extends Taxonomy {
     const TYPE = 'audit_category';
 
     public static function register() {
-        register_taxonomy(self::TYPE, Audit::TYPE, [
+        register_taxonomy(self::TYPE, Publication::TYPE, [
             'hierarchical' => true,
             'show_admin_column' => true,
             'publicly_queryable' => false,
             'show_in_rest' => true,
             'labels' => [
-                'name'              => __( 'Kategorie', ''),
+                'name'              => __( 'Prüfung Kategorie', ''),
                 'singular_name'     => __( 'Kategorie', ''),
                 'search_items'      => __( 'suche Kategorien', ''),
                 'all_items'         => __( 'alle Kategorien', ''),
@@ -21,9 +21,10 @@ class AuditCategory extends Taxonomy {
                 'update_item'       => __( 'Kategorie aktualisieren', ''),
                 'add_new_item'      => __( 'neue Kategorie', ''),
                 'new_item_name'     => __( 'neuer Kategoriename', ''),
-                'menu_name'         => __( 'Kategorien', ''),
+                'menu_name'         => __( 'Prüfung Kategorien', ''),
             ]
         ]);
     }
 
 }
+

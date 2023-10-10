@@ -1,5 +1,7 @@
 <?php
 namespace Toolkit\models;
+use Toolkit\models\Office;
+use \DateTime;
 
 class Publication extends CustomPostType
 {
@@ -24,7 +26,7 @@ class Publication extends CustomPostType
                 "view_items" => __("ansicht Publikationen", "efk"),
                 "search_items" => __("suche Publikationen", "efk")
             ],
-            "description" => "Jahrespberichte, Jahresprogramme, Fachtexte, etc.",
+            "description" => "Prüfungsberichte, Jahespberichte, Jahresprogramme, Fachtexte, etc.",
             "public" => false,
             "publicly_queryable" => true,
             "show_ui" => true,
@@ -39,13 +41,41 @@ class Publication extends CustomPostType
             "hierarchical" => false,
             "rewrite" => ["slug" => self::SLUG, "with_front" => false],
             "query_var" => true,
-            "menu_icon" => "dashicons-media-document",
+            "menu_icon" => "dashicons-editor-expand",
             "supports" => ["title", "editor", "thumbnail"],
         ];
     }
 
-   public function berichtsprache()
+   public function audit_language()
    {
         return $this->acf("berichtsprache");
    }
+
+   public function  office()
+   {
+        $id = $this->acf("amt");
+        return new Office($id);
+   }
+
+   public function  has_documents()
+   {
+        return $this->acf("dokuments");
+   }
+
+   public function documents()
+   {
+        return $this->acf("dokuments");
+   }
+
+   public function audit_date(){
+        $date = $this->acf("prufungsdatum");
+        return new DateTime($date);
+   }
+
+   public function foobar(){
+        return $this->acf("foobar");
+   }
+
+
+
 }

@@ -11,7 +11,7 @@ class PublicationCategory extends Taxonomy {
             'publicly_queryable' => false,
             'show_in_rest' => true,
             'labels' => [
-                'name'              => __( 'Kategorie', ''),
+                'name'              => __( 'Publikation Kategorie', ''),
                 'singular_name'     => __( 'Kategorie', ''),
                 'search_items'      => __( 'suche Kategorien', ''),
                 'all_items'         => __( 'alle Kategorien', ''),
@@ -21,7 +21,7 @@ class PublicationCategory extends Taxonomy {
                 'update_item'       => __( 'Kategorie aktualisieren', ''),
                 'add_new_item'      => __( 'neue Kategorie', ''),
                 'new_item_name'     => __( 'neuer Kategoriename', ''),
-                'menu_name'         => __( 'Kategorien', ''),
+                'menu_name'         => __( 'Publikation Kategorien', ''),
             ]
         ]);
     }

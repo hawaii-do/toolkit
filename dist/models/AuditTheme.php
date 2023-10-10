@@ -5,7 +5,7 @@ class AuditTheme extends Taxonomy {
     const TYPE = 'audit_theme';
 
     public static function register() {
-        register_taxonomy(self::TYPE, AUDIT::TYPE, [
+        register_taxonomy(self::TYPE, Publication::TYPE, [
             'hierarchical' => true,
             'show_admin_column' => true,
             'publicly_queryable' => false,

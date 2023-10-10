@@ -4,7 +4,6 @@ namespace Toolkit;
 
 use Toolkit\utils\AssetService;
 use Toolkit\models\Office;
-use Toolkit\models\Audit;
 use Toolkit\models\AuditCategory;
 use Toolkit\models\AuditType;
 use Toolkit\models\AuditTheme;
@@ -17,7 +16,6 @@ include("utils/main.php");
 $toRegister = [
     AssetService::class,
     Office::class,
-    Audit::class,
     AuditCategory::class,
     AuditType::class,
     AuditTheme::class,
