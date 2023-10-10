@@ -10,6 +10,7 @@ use Toolkit\models\AuditTheme;
 use Toolkit\models\Publication;
 use Toolkit\models\PublicationCategory;
 use Toolkit\models\Job;
+use Toolkit\models\Direction;
 
 include("utils/main.php");
 
@@ -22,7 +23,8 @@ $toRegister = [
     AuditTheme::class,
     Publication::class,
     PublicationCategory::class,
-    Job::class
+    Job::class,
+    Direction::class
 ];
 
 foreach ($toRegister as $class) {
